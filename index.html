@@ -260,12 +260,15 @@
       }
 
       .product-card {
+        display: flex;
+        flex-direction: column;
         background: white;
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
         text-decoration: none;
-        display: block;
+        display: flex;
+        flex-direction: column;
         transition: transform 0.15s ease;
       }
 
@@ -335,6 +338,9 @@
       }
 
       .product-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
         padding: 11px 11px 13px;
       }
 
@@ -344,6 +350,7 @@
         color: var(--dark);
         margin-bottom: 3px;
         line-height: 1.3;
+        flex: 1;
       }
 
       .prod-note {
