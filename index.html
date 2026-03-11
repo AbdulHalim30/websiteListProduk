@@ -65,26 +65,20 @@
       }
 
       .avatar-wrap {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
         width: 96px;
         height: 96px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #f5c5a3, #e8a598);
-        font-size: 48px;
+        overflow: hidden;
         border: 4px solid white;
         box-shadow: 0 8px 24px rgba(200, 100, 80, 0.18);
-        margin-bottom: 16px;
+        margin: 0 auto 16px;
       }
 
-      .tagline {
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: var(--rose);
-        margin-bottom: 6px;
+      .avatar-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
       }
 
       .name {
@@ -275,6 +269,20 @@
         transition: transform 0.15s ease;
       }
 
+      .product-card img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        display: block;
+      }
+
+      .product-img img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        display: block;
+      }
+
       .product-card:active {
         transform: scale(0.96);
       }
@@ -387,15 +395,16 @@
     <!-- HOME -->
     <div id="home">
       <div class="hero">
-        <div class="avatar-wrap">👨</div>
+        <div class="avatar-wrap">
+          <img src="avatar.jpg" alt="avatar" />
+        </div>
         <div class="tagline">Dad Journey</div>
         <div class="name">Abdul Halim</div>
         <div class="desc">
           Ayah rumahan yang berbagi rekomendasi produk terbaik buat Bunda & si
-          Kecil 🥰 Semua sudah dikurasi!
+          Kecil 🥰
         </div>
         <div class="socials">
-          <span class="badge">🎵 TikTok</span>
           <span class="badge">📦 Shopee</span>
         </div>
       </div>
@@ -406,7 +415,9 @@
         <button class="menu-btn btn-1" onclick="showPage('hamil')">
           <div class="btn-icon">🤰</div>
           <div class="btn-text">
-            <div class="btn-title">Perlengkapan Ibu Hamil</div>
+            <div class="btn-title">
+              Perlengkapan Ibu Hamil Dan Setelah Melahirkan
+            </div>
             <div class="btn-sub">Semua yang bumil butuhkan</div>
           </div>
           <span class="btn-arrow">›</span>
@@ -439,72 +450,226 @@
       <div class="page-header">
         <button class="back-btn" onclick="showHome()">‹</button>
         <div>
-          <div class="page-title">🤰 Perlengkapan Bumil</div>
-          <div class="page-sub">Dikurasi Ayah untuk Bunda</div>
+          <div class="page-title">
+            🤰 Perlengkapan Ibu Hamil Dan Setelah Melahirkan
+          </div>
         </div>
       </div>
       <div class="product-grid">
-        <a href="https://shopee.co.id" target="_blank" class="product-card">
-          <div class="product-img pi-peach">
-            🧴<span class="prod-badge pb-rose">FAVORIT</span>
+        <a
+          href="https://s.shopee.co.id/806m6XCm5R"
+          target="_blank"
+          class="product-card"
+        >
+          <div class="product-img">
+            <img
+              src="https://down-id.img.susercontent.com/file/id-11134207-7ras9-m126blt93swvf5@resize_w450_nl.webp"
+              alt="Momiasi – Yuki Home Dress Kimono – Daster Busui Lahiran"
+            />
           </div>
           <div class="product-info">
-            <div class="prod-name">Cream Stretch Mark</div>
-            <div class="prod-note">Mulai dari trimester awal ya Bunda!</div>
+            <div class="prod-name">
+              Momiasi – Yuki Home Dress Kimono – Daster Busui Lahiran
+            </div>
             <span class="prod-btn pb-btn-rose">Lihat di Shopee</span>
           </div>
         </a>
-
-        <a href="https://shopee.co.id" target="_blank" class="product-card">
-          <div class="product-img pi-yellow">
-            👡<span class="prod-badge pb-rose">REKOMEN</span>
+        <a
+          href="https://s.shopee.co.id/8KjcVXlJvr"
+          target="_blank"
+          class="product-card"
+        >
+          <div class="product-img">
+            <img
+              src="https://down-id.img.susercontent.com/file/id-11134211-7rbk0-mb1ykjyjl7a653@resize_w450_nl.webp"
+              alt="CruCil Factory Maternity Hospital Kimono"
+            />
           </div>
           <div class="product-info">
-            <div class="prod-name">Sandal Bumil Empuk</div>
-            <div class="prod-note">Anti slip & nyaman untuk kaki bengkak</div>
+            <div class="prod-name">
+              CruCil Factory Maternity Hospital Kimono
+            </div>
             <span class="prod-btn pb-btn-rose">Lihat di Shopee</span>
           </div>
         </a>
-
-        <a href="https://shopee.co.id" target="_blank" class="product-card">
-          <div class="product-img pi-purple">🩱</div>
+        <a
+          href="https://s.shopee.co.id/14UZMCFmA"
+          target="_blank"
+          class="product-card"
+        >
+          <div class="product-img">
+            <img
+              src="https://down-id.img.susercontent.com/file/id-11134207-82251-mh0adw6r43yl73@resize_w450_nl.webp"
+              alt="TALLY Bra Menyusui Tanpa Kawat"
+            />
+          </div>
           <div class="product-info">
-            <div class="prod-name">Korset Pasca Lahiran</div>
-            <div class="prod-note">Bantu rahim kembali lebih cepat</div>
+            <div class="prod-name">TALLY Bra Menyusui Tanpa Kawat</div>
             <span class="prod-btn pb-btn-rose">Lihat di Shopee</span>
           </div>
         </a>
-
-        <a href="https://shopee.co.id" target="_blank" class="product-card">
-          <div class="product-img pi-green">🧊</div>
-          <div class="product-info">
-            <div class="prod-name">Cooler Bag ASI</div>
-            <div class="prod-note">Tahan lama & anti bocor</div>
-            <span class="prod-btn pb-btn-green">Lihat di Shopee</span>
-          </div>
-        </a>
-
-        <a href="https://shopee.co.id" target="_blank" class="product-card">
-          <div class="product-img pi-peach">
-            🍼<span class="prod-badge pb-rose">TERLARIS</span>
+        <a
+          href="https://s.shopee.co.id/60LhiZ2m1c"
+          target="_blank"
+          class="product-card"
+        >
+          <div class="product-img">
+            <img
+              src="https://down-id.img.susercontent.com/file/id-11134207-7rasl-m3yczv1xp6b20d@resize_w450_nl.webp"
+              alt="Sorex Bh Menyusui Busa Tipis Kait 3 Tanpa Kawat"
+            />
           </div>
           <div class="product-info">
-            <div class="prod-name">Kantong ASI</div>
-            <div class="prod-note">BPA free & ada skala ukuran</div>
+            <div class="prod-name">
+              Sorex Bh Menyusui Busa Tipis Kait 3 Tanpa Kawat
+            </div>
             <span class="prod-btn pb-btn-rose">Lihat di Shopee</span>
           </div>
         </a>
-
-        <a href="https://shopee.co.id" target="_blank" class="product-card">
-          <div class="product-img pi-blue">😴</div>
+        <a
+          href="https://s.shopee.co.id/AUo74tO1no"
+          target="_blank"
+          class="product-card"
+        >
+          <div class="product-img">
+            <img
+              src="https://down-id.img.susercontent.com/file/id-11134207-7ra0n-md197b9zdrjs07@resize_w450_nl.webp"
+              alt="ANGEL MOMMY Bra Menyusui Tanpa Kawat Jumbo"
+            />
+          </div>
           <div class="product-info">
-            <div class="prod-name">Bantal Hamil</div>
-            <div class="prod-note">Tidur lebih nyaman & berkualitas</div>
-            <span class="prod-btn pb-btn-blue">Lihat di Shopee</span>
+            <div class="prod-name">
+              ANGEL MOMMY Bra Menyusui Tanpa Kawat Jumbo
+            </div>
+            <span class="prod-btn pb-btn-rose">Lihat di Shopee</span>
+          </div>
+        </a>
+        <a
+          href="https://s.shopee.co.id/BNukcNN1E"
+          target="_blank"
+          class="product-card"
+        >
+          <div class="product-img">
+            <img
+              src="https://down-id.img.susercontent.com/file/id-11134207-8224u-mifubd2a19fma3@resize_w450_nl.webp"
+              alt="POSE Cloud Bounce Cat Paw sandal Anti-selip Nyaman"
+            />
+          </div>
+          <div class="product-info">
+            <div class="prod-name">
+              POSE Cloud Bounce Cat Paw sandal Anti-selip Nyaman
+            </div>
+            <span class="prod-btn pb-btn-rose">Lihat di Shopee</span>
+          </div>
+        </a>
+        <a
+          href="https://s.shopee.co.id/AKUhVMU6VW"
+          target="_blank"
+          class="product-card"
+        >
+          <div class="product-img">
+            <img
+              src="https://down-id.img.susercontent.com/file/id-11134207-7rask-m545drfsuqo253@resize_w450_nl.webp"
+              alt="CERTAINTY POPOK PEREKAT DEWASA ANTI BACTERIAL"
+            />
+          </div>
+          <div class="product-info">
+            <div class="prod-name">
+              CERTAINTY POPOK PEREKAT DEWASA ANTI BACTERIAL
+            </div>
+            <span class="prod-btn pb-btn-rose">Lihat di Shopee</span>
+          </div>
+        </a>
+        <a
+          href="https://s.shopee.co.id/20pZbFVbKt"
+          target="_blank"
+          class="product-card"
+        >
+          <div class="product-img">
+            <img
+              src="https://down-id.img.susercontent.com/file/id-11134207-7qukx-lhpn71ta39wqd7@resize_w450_nl.webp"
+              alt="Momiasi - Korset Stagen Gurita Pasca Melahirkan"
+            />
+          </div>
+          <div class="product-info">
+            <div class="prod-name">
+              Momiasi - Korset Stagen Gurita Pasca Melahirkan
+            </div>
+            <span class="prod-btn pb-btn-rose">Lihat di Shopee</span>
+          </div>
+        </a>
+        <a
+          href="https://s.shopee.co.id/3qGzZ3OE68"
+          target="_blank"
+          class="product-card"
+        >
+          <div class="product-img">
+            <img
+              src="https://down-id.img.susercontent.com/file/id-11134201-7r98w-lx2i0gz7iipad1@resize_w450_nl.webp"
+              alt="Softex Maternity Breast Pad"
+            />
+          </div>
+          <div class="product-info">
+            <div class="prod-name">Softex Maternity Breast Pad</div>
+            <span class="prod-btn pb-btn-rose">Lihat di Shopee</span>
+          </div>
+        </a>
+        <a
+          href="https://s.shopee.co.id/807qNx8O7G"
+          target="_blank"
+          class="product-card"
+        >
+          <div class="product-img">
+            <img
+              src="https://down-id.img.susercontent.com/file/id-11134207-8224q-ml35si4kawoy83@resize_w450_nl.webp"
+              alt="Korset Sabuk Hamil Penyangga Perut"
+            />
+          </div>
+          <div class="product-info">
+            <div class="prod-name">Korset Sabuk Hamil Penyangga Perut</div>
+            <span class="prod-btn pb-btn-rose">Lihat di Shopee</span>
+          </div>
+        </a>
+        <a
+          href="https://s.shopee.co.id/BOz4CQnIt"
+          target="_blank"
+          class="product-card"
+        >
+          <div class="product-img">
+            <img
+              src="https://down-id.img.susercontent.com/file/id-11134207-822wm-mld0u3x9yfiae8@resize_w450_nl.webp"
+              alt="Rintik Stretchmark Cream 200ml - Pelembab Cegah Stretch mark Muncul Untuk Ibu Hamil"
+            />
+          </div>
+          <div class="product-info">
+            <div class="prod-name">
+              Rintik Stretchmark Cream 200ml - Pelembab Cegah Stretch mark
+              Muncul Untuk Ibu Hamil
+            </div>
+            <span class="prod-btn pb-btn-rose">Lihat di Shopee</span>
+          </div>
+        </a>
+        <a
+          href="https://s.shopee.co.id/9fG4NmRfoo"
+          target="_blank"
+          class="product-card"
+        >
+          <div class="product-img">
+            <img
+              src="https://down-id.img.susercontent.com/file/id-11134207-822wk-mld18sicbh8kce@resize_w450_nl.webp"
+              alt="Bundling Rintik Stretch Mark Cream + Stretch Mark Oil - Penghilang Stretchmark Paling Ampuh"
+            />
+          </div>
+          <div class="product-info">
+            <div class="prod-name">
+              Bundling Rintik Stretch Mark Cream + Stretch Mark Oil - Penghilang
+              Stretchmark Paling Ampuh
+            </div>
+            <span class="prod-btn pb-btn-rose">Lihat di Shopee</span>
           </div>
         </a>
       </div>
-      <div class="page-footer">Semua produk sudah dicek kualitasnya 🥰</div>
+      <div class="page-footer">Abdul Halim 🥰</div>
     </div>
 
     <!-- PAGE: BAYI -->
