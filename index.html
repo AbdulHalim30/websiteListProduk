@@ -1522,24 +1522,33 @@
     </div>
 
     <script>
-      // Deteksi in-app browser TikTok ← TAMBAH DI SINI
-      const isInAppBrowser = /musical_ly|tiktok/i.test(navigator.userAgent);
+      // Selalu tampilkan, kecuali di browser normal
+      const ua = navigator.userAgent.toLowerCase();
+      const isBrowser =
+        ua.includes("chrome") ||
+        ua.includes("firefox") ||
+        (ua.includes("safari") && ua.includes("version"));
+      const isInApp = !isBrowser || /tiktok|musical_ly|bytedance/i.test(ua);
 
-      if (isInAppBrowser) {
+      if (isInApp) {
         const banner = document.createElement("div");
         banner.style.cssText = `
-      position: fixed; bottom: 0; left: 0; right: 0;
+      position: fixed; bottom: 20px; left: 16px; right: 16px;
       background: #3d2c2c; color: white;
       padding: 14px 20px; text-align: center;
       font-size: 13px; z-index: 9999;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
       font-family: 'DM Sans', sans-serif;
+      line-height: 1.6;
     `;
         banner.innerHTML = `
-      🌐 Untuk pengalaman terbaik — tap <b>···</b> 
-      lalu pilih <b>"Buka di Browser"</b>
+      🌐 Untuk buka di browser —<br>
+      tap <b>···</b> pojok kanan atas lalu pilih <b>"Open in browser"</b>
     `;
         document.body.appendChild(banner);
       }
+
       function showPage(id) {
         document.getElementById("home").classList.add("hidden");
         document
